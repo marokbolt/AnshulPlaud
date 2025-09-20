@@ -1,48 +1,56 @@
 {
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "category": { "type": "string", "enum": ["To-Do", "Idea", "Other"] },
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "PlaudOutput",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string", "enum": ["To-Do", "Idea", "Other"] },
 
-      "title": { "type": ["string", "null"] },
-      "description": { "type": ["string", "null"] },
-      "dateAdded": { "type": ["string", "null"], "format": "date" },
-      "status": { "type": ["string", "null"] },
-      "urgency": { "type": ["string", "null"], "enum": ["Low", "Medium", "High"] },
-      "source": { "type": ["string", "null"] },
-      "plaudSummary": { "type": ["string", "null"] },
-      "rawTranscript": { "type": ["string", "null"] },
+          "title": { "type": ["string", "null"] },
+          "description": { "type": ["string", "null"] },
+          "dateAdded": { "type": ["string", "null"], "format": "date" },
+          "status": { "type": ["string", "null"] },
+          "urgency": { "type": ["string", "null"], "enum": ["Low", "Medium", "High"] },
+          "source": { "type": ["string", "null"] },
+          "plaudSummary": { "type": ["string", "null"] },
+          "rawTranscript": { "type": ["string", "null"] },
 
-      "type": { "type": ["string", "null"], "enum": ["Admin", "Client Follow-Up", "Content Creation", "Research", "Personal"] },
-      "dueDate": { "type": ["string", "null"], "format": "date" },
+          "type": { "type": ["string", "null"], "enum": ["Admin", "Client Follow-Up", "Content Creation", "Research", "Personal"] },
+          "dueDate": { "type": ["string", "null"], "format": "date" },
 
-      "subcategory": { "type": ["string", "null"], "enum": ["Personal", "Business", "LinkedIn Post", "Other"] },
-      "tags": { "type": "array", "items": { "type": "string" } },
+          "subcategory": { "type": ["string", "null"], "enum": ["Personal", "Business", "LinkedIn Post", "Other"] },
+          "tags": { "type": "array", "items": { "type": "string" } },
 
-      "priority": { "type": ["string", "null"], "enum": ["Low", "Medium", "High"] },
-      "url": { "type": ["string", "null"] },
-      "content": { "type": ["string", "null"] },
-      "categoryDetail": { "type": ["string", "null"], "enum": ["Work", "Personal", "Ideas", "Tasks", "Reference", "Project", "Learning", "Journal"] }
-    },
-    "required": [
-      "category",
-      "title",
-      "description",
-      "dateAdded",
-      "status",
-      "urgency",
-      "source",
-      "plaudSummary",
-      "rawTranscript",
-      "type",
-      "dueDate",
-      "subcategory",
-      "tags",
-      "priority",
-      "url",
-      "content",
-      "categoryDetail"
-    ]
-  }
+          "priority": { "type": ["string", "null"], "enum": ["Low", "Medium", "High"] },
+          "url": { "type": ["string", "null"] },
+          "content": { "type": ["string", "null"] },
+          "categoryDetail": { "type": ["string", "null"], "enum": ["Work", "Personal", "Ideas", "Tasks", "Reference", "Project", "Learning", "Journal"] }
+        },
+        "required": [
+          "category",
+          "title",
+          "description",
+          "dateAdded",
+          "status",
+          "urgency",
+          "source",
+          "plaudSummary",
+          "rawTranscript",
+          "type",
+          "dueDate",
+          "subcategory",
+          "tags",
+          "priority",
+          "url",
+          "content",
+          "categoryDetail"
+        ]
+      }
+    }
+  },
+  "required": ["items"]
 }
