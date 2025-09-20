@@ -9,21 +9,21 @@
       "description": { "type": ["string", "null"] },
       "dateAdded": { "type": ["string", "null"], "format": "date" },
       "status": { "type": ["string", "null"] },
-      "urgency": { "type": ["string", "null"], "enum": ["Low", "Medium", "High", null] },
+      "urgency": { "type": ["string", "null"], "enum": ["Low", "Medium", "High"] },
       "source": { "type": ["string", "null"] },
       "plaudSummary": { "type": ["string", "null"] },
       "rawTranscript": { "type": ["string", "null"] },
 
-      "type": { "type": ["string", "null"], "enum": ["Admin", "Client Follow-Up", "Content Creation", "Research", "Personal", null] },
+      "type": { "type": ["string", "null"], "enum": ["Admin", "Client Follow-Up", "Content Creation", "Research", "Personal"] },
       "dueDate": { "type": ["string", "null"], "format": "date" },
 
-      "subcategory": { "type": ["string", "null"], "enum": ["Personal", "Business", "LinkedIn Post", "Other", null] },
+      "subcategory": { "type": ["string", "null"], "enum": ["Personal", "Business", "LinkedIn Post", "Other"] },
       "tags": { "type": "array", "items": { "type": "string" } },
 
-      "priority": { "type": ["string", "null"], "enum": ["Low", "Medium", "High", null] },
+      "priority": { "type": ["string", "null"], "enum": ["Low", "Medium", "High"] },
       "url": { "type": ["string", "null"] },
       "content": { "type": ["string", "null"] },
-      "categoryDetail": { "type": ["string", "null"], "enum": ["Work", "Personal", "Ideas", "Tasks", "Reference", "Project", "Learning", "Journal", null] }
+      "categoryDetail": { "type": ["string", "null"], "enum": ["Work", "Personal", "Ideas", "Tasks", "Reference", "Project", "Learning", "Journal"] }
     },
     "required": [
       "category",
